@@ -1,0 +1,33 @@
+body {
+	margin: 0;
+	padding: 2em;
+	background-color: #ccc;
+	font-family: verdana,arial,helvetica,san-serif;
+	font-size: 0.9em;
+}
+
+article {
+	margin: 0;
+	padding: 1.5em;
+	background-color: #fff;
+	border: 1px solid #000;
+	border-radius: 2em;
+	box-shadow: 0 0 1em rgba(0,0,0,0.5);
+}
+
+table {
+	margin: 0;
+	padding: 0;
+	border-collapse: collapse;
+	width: 100%;
+}
+
+th {
+	text-align: left;
+	background-color: #ddd;
+	width: 20%;
+}
+
+td {
+	width: 20%;
+}
