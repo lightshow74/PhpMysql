@@ -31,6 +31,30 @@
 				<article>
 					<h1>Medalists</h1>
 					
+					<form action="insert.php" method="post">
+						<p>
+							<label for="firstName">First Name:</label>
+							<input type="text" name="firstname" id="firstName">
+						</p>
+						<p>
+							<label for="lastName">Last Name:</label>
+							<input type="text" name="lastname" id="lastName">
+						</p>
+						<p>
+							<label for="emailAddress">Medal:</label>
+							<input type="text" name="medal" id="medal">
+						</p>
+						<p>
+							<label for="emailAddress">Sport:</label>
+							<input type="text" name="sport" id="sport">
+						</p>
+						<p>
+							<label for="emailAddress">Event:</label>
+							<input type="text" name="event" id="event">
+						</p>
+						<input type="submit" value="Submit">
+					</form>
+					
 					<table>
 							<tr>
 									<th>First Name</th>
