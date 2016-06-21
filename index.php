@@ -31,30 +31,6 @@
 				<article>
 					<h1>Medalists</h1>
 					
-					<form action="insert.php" method="post">
-						<p>
-							<label for="firstName">First Name:</label>
-							<input type="text" name="firstname" id="firstName">
-						</p>
-						<p>
-							<label for="lastName">Last Name:</label>
-							<input type="text" name="lastname" id="lastName">
-						</p>
-						<p>
-							<label for="emailAddress">Medal:</label>
-							<input type="text" name="medal" id="medal">
-						</p>
-						<p>
-							<label for="emailAddress">Sport:</label>
-							<input type="text" name="sport" id="sport">
-						</p>
-						<p>
-							<label for="emailAddress">Event:</label>
-							<input type="text" name="event" id="event">
-						</p>
-						<input type="submit" value="Submit">
-					</form>
-					
 					<table>
 							<tr>
 									<th>First Name</th>
@@ -62,6 +38,7 @@
 									<th>Medal</th>
 									<th>Sport</th>
 									<th>Event</th>
+									<th>&nbsp;</th>
 							</tr>
 					<?php do {?>
 							<tr>
@@ -70,6 +47,11 @@
 									<td><?php echo $medalist_rs['Medal'];?></td>
 									<td><?php echo $medalist_rs['Sport'];?></td>
 									<td><?php echo $medalist_rs['Event'];?></td>
+									<td>
+										<form action="delete.php" method="post">
+											<input type='submit' name='delete' id= '$id' . ' value='Delete' >
+										</form>
+									</td>
 																																		  
 							</tr>
 					 <?php } while ($medalist_rs=mysqli_fetch_array($medalist_query)); ?>

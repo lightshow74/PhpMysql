@@ -13,23 +13,28 @@
 	}
 	
 	// Escape user inputs for security
-	$first_name = mysqli_real_escape_string($con, $_POST['firstname']);
-	$last_name = mysqli_real_escape_string($con, $_POST['lastname']);
-	$medal = mysqli_real_escape_string($con, $_POST['medal']);
-	$sport = mysqli_real_escape_string($con, $_POST['sport']);
-	$event = mysqli_real_escape_string($con, $_POST['event']);
+	$id = mysqli_real_escape_string($con, $_GET['id']);
  
 	// attempt insert query execution
-	$sql = "INSERT INTO medalists (FirstName, LastName, Medal, Sport, Event) VALUES ('$first_name', '$last_name', '$medal', '$sport', '$event')";
+	//$sql = "INSERT INTO medalists (FirstName, LastName, Medal, Sport, Event) VALUES ('$first_name', '$last_name', '$medal', '$sport', '$event')";
 	
-
-
- 	if(mysqli_query($con, $sql)){
+	$sql = "DELETE * FROM medalists WHERE ID = $id";
+	
+	echo $id;
+	
+	/*if (isset($_POST['delete'])){
+		$query = $db->prepare (DELETE * FROM medalists WHERE ID = ?)
+		$query->execute($id);
+		header("Location: index.php");
+	}
+*/
+ /*	if(mysqli_query($con, $sql)){
 		echo "Records added successfully.";
 		header("Location: index.php");
 	} else{
 		echo "ERROR: Could not able to execute $sql. " . mysqli_error($con);
 	}
+	*/
  
 // close connection
 mysqli_close($con);
